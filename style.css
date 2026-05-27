@@ -1,0 +1,27 @@
+html {
+    box-sizing: border-box;
+}
+
+#resizeGridButton {
+    font-size: 25px;
+
+    padding: 10px;
+
+    display: block;
+    margin: 25px auto;
+}
+
+#squareContainer {
+    display: flex;
+    flex-direction: column;
+
+    border: 2px black solid;
+
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
