@@ -12,13 +12,21 @@ function createGrid(width, height) {
             square.style.height = `calc(500px / ${height})`;
             square.height = `calc(500px / ${height})`;
             square.className = `square`;
+            square.style.opacity = 0.0;
             containerRow.append(square);
             
             square.addEventListener("mouseover", (event) => {
-            square.style.backgroundColor = `rgba(0, 0, 0, .1)`;
+                let randomRed = Math.random() * 256;
+                let randomBlue = Math.random() * 256;
+                let randomGreen = Math.random() * 256;
+                square.style.backgroundColor = `rgba(${randomRed}, ${randomBlue}, ${randomGreen})`;
+
+                if (square.style.opacity <= 0.9) {
+                    square.style.opacity = +square.style.opacity + 0.1;
+                } 
             });
         }
-    squareContainer.append(containerRow);
+        squareContainer.append(containerRow);
     }
 }
 

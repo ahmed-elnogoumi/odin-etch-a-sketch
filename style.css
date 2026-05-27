@@ -25,3 +25,7 @@ html {
 .row {
     display: flex;
 }
+
+.square {
+    border-color: black;
+}
